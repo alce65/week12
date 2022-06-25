@@ -18,6 +18,7 @@ function App() {
     ];
 
     return (
+        // <TodoContext.Provider value={useTask()}>
         <TodoProvider>
             <Layout
                 appTitle={appTitle}
@@ -56,6 +57,7 @@ function App() {
                 </Routes>
             </Layout>
         </TodoProvider>
+        // </TodoContext.Provider>;
     );
 }
 
