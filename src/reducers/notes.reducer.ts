@@ -9,7 +9,7 @@ import { actionTypes } from './notes.action.types';
 type actionNotes = Array<iNote> | iNote;
 
 export function notesReducer(
-    initialState: Array<iNote>,
+    previousState: Array<iNote>,
     action: iAction<actionNotes>
 ) {
     let state: Array<iNote>;
@@ -18,22 +18,22 @@ export function notesReducer(
             state = action.payload as Array<iNote>;
             break;
         case actionTypes['notes@add']:
-            state = [...initialState, action.payload as iNote];
+            state = [...previousState, action.payload as iNote];
             break;
         case actionTypes['notes@delete']:
-            state = initialState.filter(
+            state = previousState.filter(
                 (item) => item.id !== (action.payload as iNote).id
             );
             break;
         case actionTypes['notes@update']:
-            state = initialState.map((item) =>
+            state = previousState.map((item) =>
                 item.id === (action.payload as iNote).id
                     ? (action.payload as iNote)
                     : item
             );
             break;
         default:
-            state = initialState;
+            state = previousState;
     }
 
     return state;

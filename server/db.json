@@ -30,5 +30,31 @@
       "isCompleted": true,
       "id": 5
     }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Nota 1",
+      "author": "Pepe",
+      "isImportant": true
+    },
+    {
+      "id": 2,
+      "title": "Nota 2",
+      "author": "Pepe",
+      "isImportant": false
+    },
+    {
+      "id": 3,
+      "title": "Nota 3",
+      "author": "Luisa",
+      "isImportant": true
+    },
+    {
+      "id": 4,
+      "title": "Nota 4",
+      "author": "Ernesto",
+      "isImportant": false
+    }
   ]
 }
